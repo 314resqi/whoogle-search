@@ -55,17 +55,17 @@ If using Heroku Quick Deploy, **you can skip this section**.
 There are a few different ways to begin using the app, depending on your preferences:
 
 ### A) [Heroku Quick Deploy](https://heroku.com/about)
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/benbusby/whoogle-search/tree/heroku-app)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/314resqi/whoogle-search/tree/heroku-app)
 
 *Note: Requires a (free) Heroku account*
 
 Provides:
 - Free deployment of app
 - Free HTTPS url (https://\<your app name\>.herokuapp.com)
-- Downtime after periods of inactivity \([solution](https://github.com/benbusby/whoogle-search#prevent-downtime-heroku-only)\)
+- Downtime after periods of inactivity \([solution](https://github.com/314resqi/whoogle-search#prevent-downtime-heroku-only)\)
 
 ### B) [Repl.it](https://repl.it)
-[![Run on Repl.it](https://repl.it/badge/github/benbusby/whoogle-search)](https://repl.it/github/benbusby/whoogle-search)
+[![Run on Repl.it](https://repl.it/badge/github/314resqi/whoogle-search)](https://repl.it/github/314resqi/whoogle-search)
 
 Provides:
 - Free deployment of app
@@ -76,11 +76,11 @@ Provides:
 ### C) [pipx](https://github.com/pipxproject/pipx#install-pipx)
 Persistent install:
 
-`pipx install git+https://github.com/benbusby/whoogle-search.git`
+`pipx install git+https://github.com/314resqi/whoogle-search.git`
 
 Sandboxed temporary instance:
 
-`pipx run --spec git+https://github.com/benbusby/whoogle-search.git whoogle-search`
+`pipx run --spec git+https://github.com/314resqi/whoogle-search.git whoogle-search`
 
 ### D) pip
 `pip install whoogle-search`
@@ -105,7 +105,7 @@ See the [available environment variables](#environment-variables) for additional
 Clone the repo and run the following commands to start the app in a local-only environment:
 
 ```bash
-git clone https://github.com/benbusby/whoogle-search.git
+git clone https://github.com/314resqi/whoogle-search.git
 cd whoogle-search
 python3 -m venv venv
 source venv/bin/activate
@@ -167,14 +167,14 @@ sudo systemctl start whoogle
 
 Through Docker Hub:
 ```bash
-docker pull benbusby/whoogle-search
-docker run --publish 5000:5000 --detach --name whoogle-search benbusby/whoogle-search:latest
+docker pull 314resqi/whoogle-search
+docker run --publish 5000:5000 --detach --name whoogle-search 314resqi/whoogle-search:latest
 ```
 
 or with docker-compose:
 
 ```bash
-git clone https://github.com/benbusby/whoogle-search.git
+git clone https://github.com/314resqi/whoogle-search.git
 cd whoogle-search
 docker-compose up
 ```
@@ -182,7 +182,7 @@ docker-compose up
 or by building yourself:
 
 ```bash
-git clone https://github.com/benbusby/whoogle-search.git
+git clone https://github.com/314resqiy/whoogle-search.git
 cd whoogle-search
 docker build --tag whoogle-search:1.0 .
 docker run --publish 5000:5000 --detach --name whoogle-search whoogle-search:1.0
@@ -207,7 +207,7 @@ And kill with: `docker rm --force whoogle-search`
 ```bash
 heroku login
 heroku container:login
-git clone https://github.com/benbusby/whoogle-search.git
+git clone https://github.com/314resqi/whoogle-search.git
 cd whoogle-search
 heroku create
 heroku container:push web
@@ -215,7 +215,7 @@ heroku container:release web
 heroku open
 ```
 
-This series of commands can take a while, but once you run it once, you shouldn't have to run it again. The final command, `heroku open` will launch a tab in your web browser, where you can test out Whoogle and even [set it as your primary search engine](https://github.com/benbusby/whoogle#set-whoogle-as-your-primary-search-engine).
+This series of commands can take a while, but once you run it once, you shouldn't have to run it again. The final command, `heroku open` will launch a tab in your web browser, where you can test out Whoogle and even [set it as your primary search engine](https://github.com/314resqi/whoogle#set-whoogle-as-your-primary-search-engine).
 You may also edit environment variables from your app’s Settings tab in the Heroku Dashboard.
 
 #### Using your own server, or alternative container deployment
@@ -239,7 +239,7 @@ There are a few optional environment variables available for customizing a Whoog
 | WHOOGLE_PROXY_TYPE | The type of the proxy server. Can be "socks5", "socks4", or "http".           |
 | WHOOGLE_PROXY_LOC  | The location of the proxy server (host or ip).                 |
 | EXPOSE_PORT        | The port where Whoogle will be exposed.                        |
-| HTTPS_ONLY         | Enforce HTTPS. (See [here](https://github.com/benbusby/whoogle-search#https-enforcement)) |
+| HTTPS_ONLY         | Enforce HTTPS. (See [here](https://github.com/314resqi/whoogle-search#https-enforcement)) |
 | WHOOGLE_ALT_TW     | The twitter.com alternative to use when site alternatives are enabled in the config. |
 | WHOOGLE_ALT_YT     | The youtube.com alternative to use when site alternatives are enabled in the config. |
 | WHOOGLE_ALT_IG     | The instagram.com alternative to use when site alternatives are enabled in the config. |
