@@ -1,11 +1,11 @@
 class Config:
     def __init__(self, **kwargs):
-        self.url = ''
+        self.url = 'https://whoogle-pie.herokuapp.com'
         self.lang_search = ''
         self.lang_interface = ''
         self.ctry = ''
         self.safe = False
-        self.dark = False
+        self.dark = True
         self.nojs = False
         self.tor = False
         self.near = ''
